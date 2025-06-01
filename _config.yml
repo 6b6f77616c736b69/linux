@@ -6,7 +6,7 @@ repository: Git repository where your resume will be hosted, only required if yo
 version: 2
 
 url: 6b6f77616c736b69.github.io
-`baseurl: /linux
+baseurl: /linux
 
 # Personal info
 name: LINUX - CLI
@@ -258,8 +258,7 @@ about_content: | # this will include new lines to allow paragraphs
   **Disk**
   ```
   sudo pacman -S ncdu (install ncdu))
-   sudo ncdu (view disk usage) 
-
+    sudo ncdu (view disk usage) 
   sudo lsblk -f (view partitions and their file systems)
   sudo fdisk -l (view partitions and their file systems) 
   sudo blkid /dev/sdaX (view partition UUID)
