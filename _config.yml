@@ -262,7 +262,23 @@ about_content: | # this will include new lines to allow paragraphs
 
   sudo lsblk -f (view partitions and their file systems)
   sudo fdisk -l (view partitions and their file systems) 
+  sudo blkid /dev/sdaX (view partition UUID)
+  sudo mount /dev/sdaX /mnt (mount partition)
+  sudo umount /mnt (unmount partition)
+  sudo mkdir -p /mnt/partition_name (create mount point)
+  sudo mkfs.ext4 /dev/sdaX (format partition to ext4, change /dev/sdaX to your partition)
+  sudo fdisk -l /dev/sda (view disk partitions)
+  sudo nano /etc/fstab (edit fstab file to mount partitions on boot)
+  Content:
+    /dev/sdaX /mnt ext4 defaults 0 2 (mount partition on boot, change /dev/sdaX to your partition)
+    UUID=your_partition_uuid /mnt ext4 defaults 0 2 (mount partition on boot using UUID)
   ```   
+
+  **SSH Tunnel**
+  ```
+  ssh -L [local_port]:[destination_host]:[destination_port] [ssh_target]  
+
+  ```
 
   
 # Footer
